@@ -9,6 +9,15 @@ PARAGRAPH = ("Arial", 12)
 
 buttonBoard = []
 board = []
+player1turn = True
+
+class Player():
+    def __init__(self,name,wins,color):
+        self.name = name
+        self.wins = wins
+        self.color = color
+
+players = []
 
 class App(tk.Tk):
 
@@ -93,8 +102,14 @@ if __name__ == "__main__":
     app.mainloop()
 
 def FindFreeTile(x):
+    global board
     for b in range(6,0,-1):
         if board[x,b] == "":
             return b
     return -1
+
+def UpdateBoard(x,y):
+    global board 
+    if player1turn == True:
+        board[x,y] = 
 
