@@ -111,5 +111,7 @@ def FindFreeTile(x):
 def UpdateBoard(x,y):
     global board 
     if player1turn == True:
-        board[x,y] = 
+        board[x,y] = "1"
+    else: 
+        board[x,y] = "2"
 
