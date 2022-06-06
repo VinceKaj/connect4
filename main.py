@@ -91,3 +91,10 @@ class WinWindow(tk.Frame):
 if __name__ == "__main__":
     app = App()
     app.mainloop()
+
+def FindFreeTile(x):
+    for b in range(6,0,-1):
+        if board[x,b] == "":
+            return b
+    return -1
+
