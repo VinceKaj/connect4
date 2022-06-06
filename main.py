@@ -8,6 +8,7 @@ HEADER2 = ("Arial", 18)
 PARAGRAPH = ("Arial", 12)
 
 buttonBoard = []
+board = []
 
 class App(tk.Tk):
 
@@ -69,11 +70,14 @@ class GameWindow(tk.Frame):
 
         for y in range(6):    # loop through eachh row
           row = []            # initalize row array
+          invisRow = []
 
           for x in range(7):  # loop through each column
             row.append(tk.Button(self, text=f"{x},{y}").grid(column=x, row=y)) # add a button in each slot
+            invisRow.append(' ')
 
           buttonBoard.append(row) # add the row of buttons to the 2D button board array
+          board.append(invisRow)
 
 
 class WinWindow(tk.Frame):
